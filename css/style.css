@@ -1,0 +1,410 @@
+/* ================== Start styling for Header ======================= */
+.header {
+    background-image: url('/imgs/2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+}
+.header_info{
+    margin: 60px;
+    padding-top: 50px;
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+nav ul  li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-link{
+    color: white;
+}
+.navbar-brand{
+    color: white;
+}
+.header_btn{
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    margin: 2px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 30px;
+}
+.header_btn:hover{
+    background-color: #ffffff;
+    border: rgb(255, 0, 0) 1px solid;
+    color: rgb(255, 0, 0);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 30px;
+}
+.info{
+    line-height: 1.5;
+    font-size: 20px;
+    max-width: 500px;
+}
+.nav-link:hover, .name, span{
+    color: red;
+}
+/* ================== End styling for section 1 about me ======================= */
+
+/* ================== Start styling for section 1 about me ======================= */
+.section_1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "ahmed_img ahmed_content";
+    align-items: center;
+    background-color: #191919;
+    height: 50vh;
+}
+.ahmed_img{
+    grid-area: ahmed_img;
+    text-align: center;
+}
+.ahmed_img img{
+    max-width: 50%;
+    border-radius: 100%;
+}
+.ahmed_content{
+    grid-area: ahmed_content;
+    color: white;
+    text-align: left;
+}
+/* ================== End styling for section 1 about me ======================= */
+
+/* ================== Start styling for section 2 Skills ======================= */
+
+.section_2{
+    padding: 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+    color:white
+}
+.section_2 ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.skill_section{
+    margin-left: 50px;
+    margin-top: 50px
+}
+.skill_img{
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    padding-bottom: 10px;
+}
+/* ================== End styling for section 2 Skills ======================= */
+
+/* ================== Start styling for section 3 Projects ======================= */
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 70vh;
+    background-color: #000000;
+}
+.header_projects{
+    margin: 20px;
+    color: #ffffff;
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-card {
+    width: calc(33.33% - 70px);
+    background-color: #252525;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-card {
+        width: calc(50% - 20px);
+    }
+    .portfolio-section{
+        padding-top: 200px;
+        justify-content: start;
+        padding: 10px;
+        height: 130vh;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .portfolio-card {
+        width: calc(90% - 30px);
+    }
+    .portfolio-cards{
+        padding: 0px;
+        height: calc(10vh - 5px);
+    }
+    .portfolio-section{
+        justify-content: start;
+        padding: 10px;
+        height: 170vh;
+    }
+}
+
+/* ================== End styling for section 3 Projects ======================= */
+
+/* ================== Start styling for section 4 Contact ======================= */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    background-color: #191919;
+    color: white;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 249, 249, 0.1);
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #252525;
+}
+.contact-form input[type="submit"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 512px) {
+    .contact-section {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 100%;
+        grid-template-areas: "contact-form"
+                             "contact-info";
+        height: 100vh;
+        padding-left: 0px;
+    }
+
+    .contact-form{
+        grid-area: contact-form;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: start;
+    }
+    .contact-info{
+        grid-area: contact-info;
+        padding-left: 30px;
+    }
+    .email{
+        max-width: 200px;
+        overflow:auto;
+        white-space: nowrap;
+    }
+
+}
+
+@media screen and (max-width: 450) {
+
+    .email{
+        max-width: none;
+
+    }
+}
+/* ================== End styling for section 4 Contact ======================= */
+
+/* ================== Start styling for section 5 Footer ======================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+.social-icons a:hover {
+    color: #0077B5;
+}
+/* ================== End styling for section 5 Footer ======================= */
+
+/* ============================================================================= */
+
+
+@media screen and (max-width: 768px) {
+    /* --------------------------------- Start Section Header --------------------------------- */
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+        margin: 10px;
+    }
+    .header_info{
+        margin: 0px;
+        padding-top: 0px;
+    }
+    .navbar-links.show {
+        display: flex;
+    }
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px auto;
+        transition: 0.4s;
+    }
+    .navbar .navbar-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .navbar .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .navbar .navbar-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .navbar .navbar-toggle.active + .header_info {
+        margin-top: 20px;
+        padding-top: 20px;
+        height: 100vh;
+    }
+    .nav-link:hover{
+        color: red;
+    }
+    .header_btn{
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        margin: 2px;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        border-radius: 30px;
+    }
+    .header_btn:hover{
+        background-color: #ffffff;
+        border: rgb(255, 0, 0) 1px solid;
+        color: rgb(255, 0, 0);
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        border-radius: 30px;
+    }
+    /* --------------------------------- End section Header --------------------------------- */
+
+    /* --------------------------------- Start section About --------------------------------- */
+    .section_1 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 100%; /* Switch to a single column layout */
+        grid-template-areas: "ahmed_img"
+                             "ahmed_content";
+        height: 100vh;
+    }
+    .ahmed_img {
+        grid-area: ahmed_img;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .ahmed_content {
+        grid-area: ahmed_content;
+        padding-left: 30px;
+    }
+    /* --------------------------------- section About --------------------------------- */
+
+    /* --------------------------------- section Skills --------------------------------- */
+
+    .section_2 ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .section_2 li {
+        width: 65%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    /* --------------------------------- section Skills --------------------------------- */
+}
+
+/* --------------------------------- section Skills --------------------------------- */
+
+@media screen and (max-width: 330px) {
+    .section_2 ul {
+        flex-direction: column;
+    }
+    .section_2 li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+/* --------------------------------- section Skills --------------------------------- */
