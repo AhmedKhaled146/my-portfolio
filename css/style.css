@@ -1,6 +1,6 @@
 /* ================== Start styling for Header ======================= */
 .header {
-    background-image: url('/imgs/2.jpg');
+    background-image: url('../imgs/2.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
